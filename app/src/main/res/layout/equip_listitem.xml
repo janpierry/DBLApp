@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable name="equipment" type="com.example.dblapp.model.EquipUnit"/>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/ll_parent_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="15dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/first_slot"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/second_slot"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/third_slot"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="@string/pontuacao"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:id="@+id/et_first_slot"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="25dp"
+                    android:text="@={equipment.firstSlotValue}"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"/>
+
+            <EditText
+                    android:id="@+id/et_second_slot"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="25dp"
+                    android:text="@={equipment.secondSlotValue}"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"/>
+
+            <EditText
+                    android:id="@+id/et_third_slot"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="50dp"
+                    android:text="@={equipment.thirdSlotValue}"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"/>
+
+            <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:text="@{equipment.itemScore}"
+                    android:maxLength="4"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

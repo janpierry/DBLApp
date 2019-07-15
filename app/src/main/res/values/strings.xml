@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">DBLApp</string>
+
+    <!--Toolbar Titles-->
+    <string name="equip_register_title">Registrar Equipamento</string>
+
+    <!--String Vazia-->
+    <string name="empty_string"></string>
+
+    <!--Buttons-->
+    <string name="confirmar_button">Confirmar</string>
+    <string name="verify_avg_button">Verificar médias</string>
+    <string name="calcular_button">Calcular</string>
+
+    <!--TextView Labels-->
+    <string name="numero_equipamentos">Insira o número de equipamentos:</string>
+    <string name="first_slot">Slot 1:</string>
+    <string name="second_slot">Slot 2:</string>
+    <string name="third_slot">Slot 3:</string>
+    <string name="avg_status_title">Média dos Status</string>
+    <string name="peso_slot_title">Peso dos Slots</string>
+    <string name="pontuacao">Score:</string>
+
+    <!--Default Values-->
+    <string name="default_min">Min %</string>
+    <string name="default_max">Max %</string>
+    <string name="default_avg">Média %</string>
+    <string name="default_fist_peso">X</string>
+    <string name="default_second_peso">Y</string>
+    <string name="default_third_peso">Z</string>
+
+    <!--Build Strings-->
+    <string name="avg_value">%d %</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+</resources>

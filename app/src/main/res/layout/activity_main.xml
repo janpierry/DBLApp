@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable name="view" type="com.example.dblapp.MainActivity"/>
+
+        <variable name="equipment" type="com.example.dblapp.model.Equipment"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_spec_equips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="3dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintBottom_toTopOf="@id/bt_verify_avg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                    android:id="@+id/ll_spec_equips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:text="@string/avg_status_title"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/tv_first_slot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/first_slot"/>
+
+                    <EditText
+                            android:id="@+id/et_first_slot_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:hint="@string/default_min"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.firstSlotMin}"
+                            android:maxLength="5"/>
+
+                    <EditText
+                            android:id="@+id/et_first_slot_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:hint="@string/default_max"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.firstSlotMax}"
+                            android:maxLength="5"/>
+
+                    <TextView
+                            android:id="@+id/tv_first_avg"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/default_avg"
+                            android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/tv_second_slot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/second_slot"/>
+
+                    <EditText
+                            android:id="@+id/et_second_slot_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:hint="@string/default_min"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.secondSlotMin}"
+                            android:maxLength="5"/>
+
+                    <EditText
+                            android:id="@+id/et_second_slot_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:hint="@string/default_max"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.secondSlotMax}"
+                            android:maxLength="5"/>
+
+                    <TextView
+                            android:id="@+id/tv_second_avg"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/default_avg"
+                            android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/tv_third_slot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/third_slot"/>
+
+                    <EditText
+                            android:id="@+id/et_third_slot_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:hint="@string/default_min"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.thirdSlotMin}"
+                            android:maxLength="5"/>
+
+                    <EditText
+                            android:id="@+id/et_third_slot_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:hint="@string/default_max"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.thirdSlotMax}"
+                            android:maxLength="5"/>
+
+                    <TextView
+                            android:id="@+id/tv_third_avg"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/default_avg"
+                            android:textSize="18sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+                android:id="@+id/bt_verify_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_avg_button"
+                app:layout_constraintTop_toBottomOf="@id/cv_spec_equips"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/gl_center_screen"
+                android:onClick="@{() -> view.onClick(btVerifyAvg)}"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_center_screen"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_spec_pesos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                app:cardCornerRadius="3dp"
+                app:layout_constraintTop_toTopOf="@id/gl_center_screen"
+                app:layout_constraintBottom_toTopOf="@id/ll_nequips_fields"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:text="@string/peso_slot_title"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/tv_first_slot_peso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/first_slot"/>
+
+                    <EditText
+                            android:id="@+id/et_first_slot_peso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:gravity="center"
+                            android:hint="@string/default_fist_peso"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.firstSlotPeso}"
+                            android:maxLength="1"/>
+
+                    <TextView
+                            android:id="@+id/tv_second_slot_peso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/second_slot"/>
+
+                    <EditText
+                            android:id="@+id/et_second_slot_peso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:gravity="center"
+                            android:hint="@string/default_second_peso"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.secondSlotPeso}"
+                            android:maxLength="5"/>
+
+                    <TextView
+                            android:id="@+id/tv_third_slot_peso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/third_slot"/>
+
+                    <EditText
+                            android:id="@+id/et_third_slot_peso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/default_third_peso"
+                            android:inputType="numberDecimal"
+                            android:text="@={equipment.thirdSlotPeso}"
+                            android:maxLength="5"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+                android:id="@+id/ll_nequips_fields"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/cv_spec_pesos"
+                app:layout_constraintBottom_toTopOf="@id/bt_confirmar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numero_equipamentos"
+                    android:textSize="20sp"/>
+
+            <EditText
+                    android:id="@+id/et_numero_equips"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3"/>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/bt_confirmar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmar_button"
+                app:layout_constraintTop_toBottomOf="@id/ll_nequips_fields"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:onClick="@{() -> view.onClick(btConfirmar)}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
